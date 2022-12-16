@@ -12,7 +12,13 @@ hero:
   actions:
     - theme: brand
       text: Projects
-      link: /project
+      link: /projects
+    - theme: brand
+      text: Teams
+      link: /teams
+    - theme: brand
+      text: Tech Directory
+      link: /techdir
     - theme: alt
       text: View on GitHub
       link: https://github.com/vuejs/vitepress

@@ -3,7 +3,7 @@ export default {
   title: 'SOSensible Knowledgebase',
   description: 'Welcome to the team!',
   lastUpdated: true,
-  outDir: '../public',
+  outDir: '../deploy',
   themeConfig: {
     editLink: {
       pattern: 'https://github.com/sosensible/kb/edit/main/docs/:path',
@@ -17,17 +17,20 @@ export default {
       {
         text: 'Getting Started',
         items: [
-          { text: 'Projects', link: '/project' }
+          { text: 'Projects', link: '/projects' },
+          { text: 'Teams', link: '/teams' },
+          { text: 'Tech Directory', link: '/techdir' }
         ]
-      },
-      { text: 'History', link: 'getting-started' }
+      }
     ],
     sidebar: [
       {
         text: 'KB',
         collapsible: true,
         items: [
-          { text: 'Projects', link: '/project' }
+          { text: 'Projects', link: '/projects' },
+          { text: 'Teams', link: '/teams' },
+          { text: 'Tech Directory', link: '/techdir' }
         ]
       }
     ]
