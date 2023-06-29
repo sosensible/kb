@@ -8,8 +8,12 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "vitepress": "^1.0.0-alpha.31",
-    "vue": "^3.2.45"
+    "@whyframe/core": "^0.1.9",
+    "@whyframe/vue": "^0.1.5",
+    "vite": "^4.3.9",
+    "vite-plugin-inspect": "^0.7.18",
+    "vitepress": "^1.0.0-beta.3",
+    "vue": "^3.3.4"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
