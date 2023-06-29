@@ -17,6 +17,9 @@ hero:
       text: Teams
       link: /teams
     - theme: brand
+      text: Tools
+      link: /tools
+    - theme: brand
       text: Tech Directory
       link: /techdir
     - theme: alt

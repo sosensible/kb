@@ -19,6 +19,7 @@ export default {
         items: [
           { text: 'Projects', link: '/projects' },
           { text: 'Teams', link: '/teams' },
+          { text: 'Tools', link: '/tools' },
           { text: 'Tech Directory', link: '/techdir' }
         ]
       }
@@ -30,6 +31,7 @@ export default {
         items: [
           { text: 'Projects', link: '/projects' },
           { text: 'Teams', link: '/teams' },
+          { text: 'Tools', link: '/tools' },
           { text: 'Tech Directory', link: '/techdir' }
         ]
       }
