@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('two') {
           steps {
-            echo 'Step two $BUILD_NUMBER'
+            echo 'Step two ${currentBuild.fullDisplayName}'
           }
         }
 
