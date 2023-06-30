@@ -21,6 +21,12 @@ pipeline {
           }
         }
 
+        stage('Input Please') {
+          steps {
+            input(message: 'We are waiting for you', id: 'wait-check', ok: 'Go', submitter: 'John', submitterParameter: 'jdf')
+          }
+        }
+
       }
     }
 
