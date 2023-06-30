@@ -17,7 +17,7 @@ pipeline {
 
         stage('make file') {
           steps {
-            writeFile(file: 'test.txt', text: 'We should have a file called test.txt now.')
+            writeFile(file: '/build/test.txt', text: 'We should have a file called test.txt now.')
           }
         }
 
@@ -31,8 +31,25 @@ pipeline {
     }
 
     stage('three') {
-      steps {
-        echo 'step three'
+      parallel {
+        stage('three') {
+          steps {
+            echo 'step three'
+          }
+        }
+
+        stage('copy') {
+          steps {
+            sh '# sudo scp -r ./build dojo@10.0.0.6:/home/dojo/build'
+          }
+        }
+
+        stage('artifacts') {
+          steps {
+            archiveArtifacts(allowEmptyArchive: true, artifacts: '/build')
+          }
+        }
+
       }
     }
 
