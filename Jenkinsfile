@@ -27,6 +27,12 @@ pipeline {
           }
         }
 
+        stage('build folder') {
+          steps {
+            sh 'mkdir --parents build'
+          }
+        }
+
       }
     }
 
