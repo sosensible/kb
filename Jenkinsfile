@@ -1,34 +1,21 @@
 pipeline {
   agent any
-  stages {
-    stage('Build') {
-      parallel {
+
+    stages {
         stage('Build') {
-          steps {
-            sh 'git --version'
-          }
+            steps {
+                echo 'Building..'
+            }
         }
-
-        stage('') {
-          steps {
-            fileExists 'compose-dev.yaml'
-          }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
         }
-
-      }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-
-    stage('Speak') {
-      steps {
-        sh 'echo \'build flow working\''
-      }
-    }
-
-    stage('Create') {
-      steps {
-        writeFile(file: 'new.txt', text: 'The file is created.')
-      }
-    }
-
-  }
 }
