@@ -5,6 +5,10 @@ pipeline {
       steps {
         echo 'step one'
       }
+
+      steps {
+        sh 'mkdir --parents build'
+      }
     }
 
     stage('two') {
@@ -12,12 +16,6 @@ pipeline {
         stage('two') {
           steps {
             echo 'Step two'
-          }
-        }
-
-        stage('build folder') {
-          steps {
-            sh 'mkdir --parents build'
           }
         }
 
