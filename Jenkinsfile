@@ -11,14 +11,14 @@ pipeline {
       parallel {
         stage('two') {
           steps {
-            echo 'Step two ${BUILD_NUMBER}'
+            echo 'Step two $BUILD_NUMBER'
           }
         }
 
         stage('make file') {
           steps {
             sh 'mkdir --parents build'
-            writeFile(file: 'build/test${BUILD_ID}.txt', text: 'We should have a file called test${BUILD_ID}.txt now.')
+            writeFile(file: 'build/test$BUILD_ID.txt', text: 'We should have a file called test$BUILD_ID.txt now.')
           }
         }
 
