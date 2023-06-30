@@ -47,7 +47,7 @@ pipeline {
 
         stage('artifacts') {
           steps {
-            archiveArtifacts(allowEmptyArchive: true, artifacts: './build')
+            archiveArtifacts(allowEmptyArchive: true, artifacts: 'build')
           }
         }
 
