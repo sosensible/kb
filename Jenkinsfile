@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('two') {
           steps {
-            echo 'Step two ${currentBuild.fullDisplayName}'
+            echo 'Step two ${MYBUILD} $MYBUILD'
           }
         }
 
@@ -55,5 +55,8 @@ echo "path: ${PATH}"'''
       }
     }
 
+  }
+  environment {
+    MYBUILD = '$BUILD_ID'
   }
 }
