@@ -15,6 +15,12 @@ pipeline {
           }
         }
 
+        stage('build folder') {
+          steps {
+            sh 'mkdir --parents build'
+          }
+        }
+
         stage('make file') {
           steps {
             writeFile(file: '/build/test.txt', text: 'We should have a file called test.txt now.')
@@ -24,12 +30,6 @@ pipeline {
         stage('Input Please') {
           steps {
             input(message: 'We are waiting for you', id: 'wait-check', ok: 'Go', submitter: 'John', submitterParameter: 'jdf')
-          }
-        }
-
-        stage('build folder') {
-          steps {
-            sh 'mkdir --parents build'
           }
         }
 
