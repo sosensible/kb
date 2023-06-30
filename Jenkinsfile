@@ -41,7 +41,8 @@ pipeline {
 
         stage('copy') {
           steps {
-            sh '# sudo scp -r ./build dojo@10.0.0.6:/home/dojo/build'
+            sh '''# sudo scp -r ./build dojo@10.0.0.6:/home/dojo/build
+echo "path: ${PATH}"'''
           }
         }
 
