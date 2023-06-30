@@ -3,11 +3,7 @@ pipeline {
   stages {
     stage('one') {
       steps {
-        echo 'step one'
-      }
-
-      steps {
-        sh 'mkdir --parents build'
+        echo 'step one
       }
     }
 
@@ -20,7 +16,8 @@ pipeline {
         }
 
         stage('make file') {
-          steps {
+          steps {'
+            sh 'mkdir --parents build'
             writeFile(file: '/build/test.txt', text: 'We should have a file called test.txt now.')
           }
         }
