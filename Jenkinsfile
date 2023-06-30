@@ -18,7 +18,7 @@ pipeline {
         stage('make file') {
           steps {
             sh 'mkdir --parents build'
-            writeFile(file: 'build/test${BUILD_ID}.txt', text: 'We should have a file called test.txt now.')
+            writeFile(file: 'build/test${BUILD_ID}.txt', text: 'We should have a file called test${BUILD_ID}.txt now.')
           }
         }
 
